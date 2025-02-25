@@ -9,5 +9,4 @@ export default class Cilindro{
     calcularVolume(){
         return Math.PI * Math.pow(raio, 2) * altura
     }
-    
 }
