@@ -9,31 +9,35 @@
     <link rel="stylesheet" href="style.css">
 </head>  
 <body>  
+    <div class="container">  
+        <h1>Calculadora de Cone e Cilindro</h1>  
 
-<div class="container">  
-    <h1>Calculadora de Cone e Cilindro</h1>  
+        <select id="formaSelector" onchange="alternarEntradas()">  
+            <option value="">Selecione uma forma</option>  
+            <option value="cone">Cone</option>  
+            <option value="cilindro">Cilindro</option>  
+        </select>  
 
-    <select id="shapeSelector" onchange="toggleForm()">  
-        <option value="">Selecione uma forma</option>  
-        <option value="cone">Cone</option>  
-        <option value="cilindro">Cilindro</option>  
-    </select>  
+        <div id="inputs" class="form-section" style="display: none;">  
+            <div id="formCone" class="forma" style="display: none;">  
+                <h2>Cone</h2>  
+                <input type="number" id="raioCone" placeholder="Raio do Cone" required>  
+                <input type="number" id="alturaCone" placeholder="Altura do Cone" required>  
+                <button onclick="">Calcular Cone</button>  
+                <div id="resultadoCone" class="result"></div>  
+            </div>  
 
-    <div id="coneForm" class="form-section">  
-        <h2>Cone</h2>  
-        <input type="number" id="coneRadius" placeholder="Raio do Cone" required>  
-        <input type="number" id="coneHeight" placeholder="Altura do Cone" required>  
-        <button onclick="">Calcular Cone</button>  
-        <div id="coneResult" class="result"></div>  
+            <div id="formCilindro" class="forma" style="display: none;">  
+                <h2>Cilindro</h2>  
+                <input type="number" id="raioCilindro" placeholder="Raio do Cilindro" required>  
+                <input type="number" id="alturaCilindro" placeholder="Altura do Cilindro" required>  
+                <button onclick="">Calcular Cilindro</button>  
+                <div id="resultadoCilindro" class="result"></div>  
+            </div>  
+        </div>  
+
+        <div id="resultados" style="display: none;"></div>  
     </div>  
 
-    <div id="cylinderForm" class="form-section">  
-        <h2>Cilindro</h2>  
-        <input type="number" id="cylinderRadius" placeholder="Raio do Cilindro" required>  
-        <input type="number" id="cylinderHeight" placeholder="Altura do Cilindro" required>  
-        <button onclick="">Calcular Cilindro</button>  
-        <div id="cylinderResult" class="result"></div>  
-    </div>  
-</div>  
 </body>  
 </html>

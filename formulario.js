@@ -1,13 +1,16 @@
-function toggleForm() {  
-    const shape = document.getElementById('shapeSelector').value;  
-    document.getElementById('coneForm').style.display = shape === 'cone' ? 'block' : 'none';  
-    document.getElementById('cylinderForm').style.display = shape === 'cilindro' ? 'block' : 'none';  
-    // Limpa resultados ao mudar a forma  
-    document.getElementById('coneResult').innerHTML = '';  
-    document.getElementById('cylinderResult').innerHTML = '';  
-    // Limpa os valores dos campos  
-    document.getElementById('coneRadius').value = '';  
-    document.getElementById('coneHeight').value = '';  
-    document.getElementById('cylinderRadius').value = '';  
-    document.getElementById('cylinderHeight').value = '';  
+function alternarEntradas() {  
+    let formaElement = document.getElementById("formaSelector"),   
+        inputs = document.getElementById("inputs"),   
+        resultados = document.getElementById("resultados");   
+
+    if (formaElement.value) {  
+        inputs.style.display = "block";   
+        resultados.style.display = "none";   
+
+        document.getElementById('formCone').style.display = (formaElement.value === 'cone') ? 'block' : 'none';   
+        document.getElementById('formCilindro').style.display = (formaElement.value === 'cilindro') ? 'block' : 'none';   
+    } else {  
+        inputs.style.display = "none";   
+        resultados.style.display = "none";   
+    }  
 }  
