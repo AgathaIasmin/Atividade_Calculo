@@ -4,7 +4,7 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Calculadora de Cone e Cilindro</title>  
-    <script src="formulario.js" defer></script>
+    <script src="index.js" defer></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>  
@@ -23,7 +23,7 @@
                 <h2>Cone</h2>  
                 <input type="number" id="raioCone" placeholder="Raio do Cone" required>  
                 <input type="number" id="alturaCone" placeholder="Altura do Cone" required>  
-                <button onclick="">Calcular Cone</button>  
+                <button onclick="calcularCone()">Calcular Cone</button>    
                 <div id="resultadoCone" class="result"></div>  
             </div>  
 
@@ -31,8 +31,8 @@
                 <h2>Cilindro</h2>  
                 <input type="number" id="raioCilindro" placeholder="Raio do Cilindro" required>  
                 <input type="number" id="alturaCilindro" placeholder="Altura do Cilindro" required>  
-                <button onclick="">Calcular Cilindro</button>  
-                <div id="resultadoCilindro" class="result"></div>  
+                <button onclick="calcularCilindro()">Calcular Cilindro</button>  
+                <div id="" class="result"></div>  
             </div>  
         </div>  
         <div id="resultados" style="display: none;"></div>  
